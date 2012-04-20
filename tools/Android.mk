@@ -15,7 +15,8 @@
 #
 
 LOCAL_PATH:= $(call my-dir)
-ifneq (,$(TARGET_BUILD_APPS)$(filter true,$(TARGET_BUILD_PDK)))
+
+ifneq ($(TARGET_BUILD_APPS),)
 
 ##################################
 include $(CLEAR_VARS)
