@@ -28,7 +28,7 @@ $$(_cpsttrp_sdk_intermediates)/javalib.jar : $$(_cpsttrp_sdk_intermediates)/clas
 	$$(call copy-file-to-target)
 endef
 
-_historic_sdk_versions := $(filter-out current, $(TARGET_AVAILABLE_SDK_VERSIONS))
+_historic_sdk_versions := $(TARGET_AVAILABLE_SDK_VERSIONS)
 $(foreach s,$(_historic_sdk_versions),$(eval $(call _copy_prebuilt_sdk_to_the_right_place,$(s))))
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
